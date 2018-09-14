@@ -17,21 +17,17 @@ function allCats(req,res){
         if(errs){
             console.log(errs)
         }
-        res.render("cats", {data: data})
+        res.json(data)
         
     })
 }
 
 function makeCat(req,res){
-    Cats.create(req.body, (errs, results)=>{
-        if(errs){
-            console.log("you gooft!");
-            console.log(errs);
-        }else{
-            console.log(results);
-        }
-        res.redirect("/cats")
-    })
+    console.log("made it here!");
+    console.log(req.body);
+    Cats.create(req.body)
+        .then(data=>res.json({status: "good", data: data}))
+        .catch(errs=>res.json({status: "bad", data: errs}))
 
 }
 

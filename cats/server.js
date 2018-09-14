@@ -4,9 +4,10 @@ const bp = require("body-parser");
 const router = require("./server/routes.js");
 
 const app = xp();
-app.set("views",path.join(__dirname, "/views"));
-app.set("view engine", "ejs");
-app.use(bp.urlencoded({extended: true}));
+// app.set("views",path.join(__dirname, "/views"));
+// app.set("view engine", "ejs");
+app.use(xp.static(path.join(__dirname, "/client/dist/client" )))
+app.use(bp.json());
 
 router(app);
 

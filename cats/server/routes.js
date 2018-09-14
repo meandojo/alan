@@ -4,7 +4,7 @@ function router(app)
 {
     app.get("/", home);    
     app.get("/cats", cats);    
-    app.post("/makeCat", cattify);
+    app.post("/cats", cattify);
     // app.patch("/cats/:id", updateCat)
 }
 

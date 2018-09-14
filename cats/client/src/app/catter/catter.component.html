@@ -1,0 +1,13 @@
+<div>
+  <h3>Make A Cat</h3>
+  <ul *ngIf="erros.length > 0">
+    <li *ngFor="let e of erros">
+      {{e}}
+    </li>
+  </ul>
+  <form (submit)="makeCat()">
+    <input type="text" name="name" [(ngModel)]="cat.name">
+    <input type="submit" value="Make A Cat!">
+  </form>
+  {{ cat | json }}
+</div>
