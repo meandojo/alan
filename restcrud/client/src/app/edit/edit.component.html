@@ -1,0 +1,11 @@
+<h2>EDIT !!!</h2>
+<form (submit)="update()">
+  <input type="text" name="title" [(ngModel)]="_task.title">
+  <input type="text" name="description" [(ngModel)]="_task.description">
+  <select name="completed" [(ngModel)]="_task.completed">
+    <option value="true">TRUE</option>
+    <option value="false">FALSE</option>
+  </select>
+  <input type="submit" value="TAKSIFY!!!">
+  {{ _task | json }}
+</form>

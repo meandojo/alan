@@ -1,0 +1,22 @@
+<h2>ALL THA TASSKAKSKA</h2>
+<table>
+  <thead>
+    <tr>
+      <th>
+          Task Name
+      </th>
+      <th>
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let t of _tasks">
+      <td>{{t.title}}</td>
+      <td>
+        <button [routerLink]="['/tasks',t._id]">Deetz</button>
+        <button [routerLink]="['/tasks',edit,t._id]">Editz</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

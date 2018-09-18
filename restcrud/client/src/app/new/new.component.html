@@ -1,0 +1,11 @@
+<h2>NEW !!!</h2>
+<form (submit)="create()">
+  <input type="text" name="title" [(ngModel)]="_task.title">
+  <input type="text" name="description" [(ngModel)]="_task.description">
+  <input type="submit" value="TAKSIFY!!!">
+</form>
+<ul *ngIf="_errors.length > 0">
+    <li *ngFor="let e of _errors">
+      <p>{{e}}</p>
+    </li>
+</ul>

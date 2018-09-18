@@ -1,0 +1,6 @@
+<h2>A ATASKSKSKAKA!</h2>
+<h4>{{ _task.title }}</h4>
+<p>{{ _task.completed }}</p>
+<p>{{ _task.description }}</p>
+<button (click)="delete(_task._id)">DELETE</button>
+<button [routerLink]="['/tasks','update',_task._id]">EDIT</button>
